@@ -8,25 +8,28 @@
 </head>
 <body>
   <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
-<script>
- // Example: pass configuration properties to createFrame()
-callFrame = window.DailyIframe.createFrame({
-  iframeStyle: {
-    position: 'fixed',
-    border: '1px solid black',
-    width: '375px',
-    height: '450px',
-    right: '1em',
-    bottom: '1em',
-  },
-  dailyConfig: {
-    micAudioMode: 'music',
-  },
-  showLeaveButton: true,
-  showFullscreenButton: true,
-});
+  <script>
 
-  callFrame.join({ url: 'https://stephenrivas.daily.co/yBF6tMZ7HPFdFtAEcmqG' });
-</script>
+    const url = YOUR_DAILY_URL_HERE;
+    const room_name = YOUR_ROOM_NAME_HERE;
+
+    callFrame = window.DailyIframe.createFrame({
+      iframeStyle: {
+        position: 'fixed',
+        border: '1px solid black',
+        width: '375px',
+        height: '450px',
+        right: '1em',
+        bottom: '1em',
+      },
+      dailyConfig: {
+        micAudioMode: 'music',
+      },
+      showLeaveButton: true,
+      showFullscreenButton: true,
+    });
+
+    callFrame.join({ url: `${url}`/`${room_name}`});
+  </script>
 </body>
 </html>
